@@ -1,0 +1,18 @@
+{
+  "author": "yuki akiyama",
+  "name": "promise-util",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "bluebird" : ""
+  },
+  "readmeFilename": "README.md",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": ""
+  },
+  "license": "MIT"
+}
