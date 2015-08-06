@@ -1,6 +1,6 @@
 {
   "author": "yuki akiyama",
-  "name": "promise-util",
+  "name": "promise-util-task",
   "version": "0.0.1",
   "private": false,
   "dependencies": {
