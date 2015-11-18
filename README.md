@@ -1,7 +1,5 @@
 # node-promise-util-task
 
-Task Manager for Promise
-
 ## task.seq(tasklist)
 
 sequentially processing
