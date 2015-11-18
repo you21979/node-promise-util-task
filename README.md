@@ -1,6 +1,6 @@
 # node-promise-util-task
 
-Promise Task
+Task Manager for Promise
 
 ## task.seq(tasklist)
 
