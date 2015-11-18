@@ -11,6 +11,18 @@
   "main": "index.js",
   "devDependencies": {
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/you21979/node-promise-util-task.git"
+  },
+  "bugs": {
+    "url": "https://github.com/you21979/node-promise-util-task/issues"
+  }
+  "keywords": [
+    "promise",
+    "task",
+    "task-process"
+  ],
   "scripts": {
     "test": ""
   },
