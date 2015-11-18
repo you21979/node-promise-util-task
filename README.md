@@ -1,4 +1,10 @@
-# node-promise-util-task
+# promise-util-task
+
+## install
+
+```
+npm i promise-util-task
+```
 
 ## task.seq(tasklist)
 
