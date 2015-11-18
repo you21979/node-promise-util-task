@@ -2,7 +2,7 @@
 
 Promise Task
 
-## task.seq
+## task.seq(tasklist)
 
 sequentially processing
 
@@ -43,7 +43,7 @@ elapsed time - seq: 10033ms
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
-## task.all
+## task.all(tasklist)
 
 parallel processing
 
@@ -84,7 +84,7 @@ elapsed time - all: 1007ms
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
-## task.limit
+## task.limit(tasklist, limit_count)
 
 limited parallel processing
 
@@ -121,7 +121,7 @@ task.limit(tasklist, 5).then(function(res){
 ```
 
 ```:result
-elapsed time - seq: 10033ms
+elapsed time - limit: 2009ms
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
