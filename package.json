@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "private": false,
   "dependencies": {
-    "bluebird" : ""
+    "bluebird" : "2.9.*"
   },
   "readmeFilename": "README.md",
-  "description": "",
+  "description": "task manager for promise",
   "main": "index.js",
   "devDependencies": {
   },
