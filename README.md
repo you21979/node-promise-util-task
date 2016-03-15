@@ -1,5 +1,9 @@
 # promise-util-task
 
+[![NPM](https://nodei.co/npm/promise-util-task.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/promise-util-task)  
+[![Build Status](https://secure.travis-ci.org/you21979/node-promise-util-task.png?branch=master)](https://travis-ci.org/you21979/node-promise-util-task)
+[![Coverage Status](https://coveralls.io/repos/github/you21979/node-promise-util-task/badge.svg?branch=master)](https://coveralls.io/github/you21979/node-promise-util-task?branch=master)
+
 ## install
 
 ```
