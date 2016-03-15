@@ -1,5 +1,5 @@
 {
-  "author": "yuki akiyama",
+  "author": "Yuki Akiyama",
   "name": "promise-util-task",
   "version": "0.0.1",
   "private": false,
@@ -10,6 +10,10 @@
   "description": "task manager for promise",
   "main": "index.js",
   "devDependencies": {
+    "istanbul":"",
+    "coveralls":"",
+    "power-assert":"",
+    "mocha":""
   },
   "repository": {
     "type": "git",
@@ -24,7 +28,8 @@
     "task-process"
   ],
   "scripts": {
-    "test": ""
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "license": "MIT"
 }
