@@ -13,4 +13,19 @@ describe('util-task', function() {
             done(e);
         })
     });
+    it('error catch1', function(done) {
+        task.seq([f(0),f(1),f(2),f(3)]).then(function(res){
+            throw new Error("test");
+            done(new Error("error cache fail"));
+        }).catch(function(e){
+            done();
+        })
+    });
+    it('error catch2', function(done) {
+        task.seq([f(0),function(){ throw new Error("test") },f(2),f(3)]).then(function(res){
+            done(new Error("error cache fail"));
+        }).catch(function(e){
+            done();
+        })
+    });
 });
