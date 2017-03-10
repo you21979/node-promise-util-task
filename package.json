@@ -1,10 +1,10 @@
 {
   "author": "Yuki Akiyama",
   "name": "promise-util-task",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "dependencies": {
-    "bluebird" : "2.9.*"
+    "bluebird" : "3.5.*"
   },
   "readmeFilename": "README.md",
   "description": "task manager for promise",
