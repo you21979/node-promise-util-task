@@ -1,35 +1,45 @@
 {
-  "author": "Yuki Akiyama",
   "name": "promise-util-task",
-  "version": "0.0.3",
-  "private": false,
-  "dependencies": {
-    "bluebird" : "3.5.*"
-  },
-  "readmeFilename": "README.md",
+  "version": "0.1.0",
   "description": "task manager for promise",
-  "main": "index.js",
-  "devDependencies": {
-    "istanbul":"",
-    "coveralls":"",
-    "power-assert":"",
-    "mocha":""
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "example",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/you21979/node-promise-util-task.git"
-  },
-  "bugs": {
-    "url": "https://github.com/you21979/node-promise-util-task/issues"
+    "url": "git+https://github.com/you21979/node-promise-util-task.git"
   },
   "keywords": [
     "promise",
     "task",
     "task-process"
   ],
+  "devDependencies": {
+    "@types/node": "^9.6.0",
+    "@types/mocha": "^5.0.0",
+    "typescript": "^2.8.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.5"
+  },
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "build": "./node_modules/.bin/tsc -p ./",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./dist/test",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
-  "license": "MIT"
+  "author": "Yuki Akiyama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/you21979/node-promise-util-task/issues"
+  },
+  "homepage": "https://github.com/you21979/node-promise-util-task#readme",
+  "dependencies": {
+    "@types/es6-promise": "^3.3.0"
+  }
 }
