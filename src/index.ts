@@ -1,2 +1,4 @@
-import * as task from './lib/task'
-export = task
+import {seq, all, limit} from './lib/task'
+export {
+    seq, all, limit
+}

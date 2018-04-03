@@ -1,4 +1,3 @@
-var Promise = require('bluebird');
 var task = require('..');
 
 var timeout = function(callback, ms) {
