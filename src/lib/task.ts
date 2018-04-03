@@ -1,4 +1,3 @@
-
 type Resolver<T> = () => T
 
 export const seq = ( funcs : Resolver<any>[] ) : Promise<any[]> => {
@@ -15,7 +14,7 @@ export const seq = ( funcs : Resolver<any>[] ) : Promise<any[]> => {
 export const all = ( funcs : Resolver<any>[] ) : Promise<any[]> => {
     const promises : Promise<any>[] = funcs.map((func : Resolver<any>) => {
         try {
-            return Promise.resolve(func())
+            return Promise.resolve( func() )
         } catch (e) {
             return Promise.reject(e)
         }
@@ -32,16 +31,15 @@ const createPipeline = (funcs : Resolver<any>[], max : number) : Resolver<any>[]
         const idx = n % max
         pipeline[idx].push(func)
     })
-    const pipeline_seqs = pipeline.map((funcs : Resolver<any>[]) => {
+    return pipeline.map((funcs : Resolver<any>[]) => {
         return () => seq(funcs)
     })
-    return pipeline_seqs
 }
 
 export const limit = (funcs : Resolver<any>[], max : number) : Promise<any[]> => {
     const pipeline_seqs = createPipeline(funcs, max)
     return all(pipeline_seqs).then((matrix : any[][]) => {
-        const max = matrix.reduce((r, v) => { return r + v.length }, 0)
+        const max = matrix.reduce((sum, line) => { return sum + line.length }, 0)
         const results : any[] = new Array(max)
         const len = matrix.length
         for(let i = 0; i < len; ++i){

@@ -15,7 +15,6 @@ npm i promise-util-task
 sequentially processing
 
 ```:seq.js
-var Promise = require('bluebird');
 var task = require('promise-util-task');
 
 var timeout = function(callback, ms) {
@@ -56,7 +55,6 @@ elapsed time - seq: 10033ms
 parallel processing
 
 ```:all.js
-var Promise = require('bluebird');
 var task = require('promise-util-task');
 
 var timeout = function(callback, ms) {
@@ -97,7 +95,6 @@ elapsed time - all: 1007ms
 limited parallel processing
 
 ```:limit.js
-var Promise = require('bluebird');
 var task = require('promise-util-task');
 
 var timeout = function(callback, ms) {
@@ -132,4 +129,19 @@ task.limit(tasklist, 5).then(function(res){
 elapsed time - limit: 2009ms
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
+
+
+# compatible note
+
+## 0.1.0
+
+### Promise
+
+This module removed bluebird from version 0.1.0
+
+### TypeScript support
+
+rewrite typescript.
+
+
 
