@@ -17,6 +17,10 @@
   },
   "keywords": [
     "promise",
+    "promise-manager",
+    "controlled parallelism",
+    "parallel",
+    "concurrent",
     "task",
     "task-process"
   ],
