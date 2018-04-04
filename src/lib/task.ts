@@ -43,8 +43,6 @@ export const limit = (funcs : Resolver<any>[], max : number = 1) : Promise<any[]
         then(limit_postprocess)
 }
 
-export default limit
-
 const limit_preprocess = (funcs : Resolver<any>[], max : number) : Resolver<any>[] => {
     const pipeline : Resolver<any>[][] = []
     for(let i = 0; i < max; ++i){

@@ -1,2 +1,1 @@
-import * as task from './lib/task'
-export = task
+export * from './lib/task'
