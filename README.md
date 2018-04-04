@@ -130,6 +130,33 @@ elapsed time - limit: 2009ms
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
+## typescript sample
+
+```:seq.ts
+import * as put from 'promise-util-task'
+import * as psleep from '@you21979/promise-sleep'
+
+const list = [
+    () => psleep(Math.random() + 1000, 1),
+    () => psleep(Math.random() + 1000, 2),
+    () => psleep(Math.random() + 1000, 3),
+    () => psleep(Math.random() + 1000, 4),
+    () => psleep(Math.random() + 1000, 5),
+    () => psleep(Math.random() + 1000, 6),
+    () => psleep(Math.random() + 1000, 7),
+    () => psleep(Math.random() + 1000, 8),
+    () => psleep(Math.random() + 1000, 9),
+    () => psleep(Math.random() + 1000, 10)
+]
+
+console.time("elapsed time - seq");
+put.seq(list).then((res) => {
+    console.timeEnd("elapsed time - seq");
+    console.log(res)
+})
+```
+
+
 
 # compatible note
 
