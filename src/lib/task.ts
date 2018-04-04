@@ -35,6 +35,7 @@ export const all = ( funcs : Resolver<any>[] ) : Promise<any[]> => {
 /**
  * Execute the specified number of processes at once.
  * @param funcs An array of functions that return value, or promise.
+ * @param max Maximum number of simultaneous executions.
  * @returns Results are stored in the order stored in funcs.
  */
 export const limit = (funcs : Resolver<any>[], max : number = 1) : Promise<any[]> => {
